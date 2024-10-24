@@ -1,16 +1,16 @@
-class Todo {
+class ToDo {
   final int id;
-  String title;
-  bool completed;
+  final String title;
+  final bool completed;
 
-  Todo({
+  const ToDo({
     required this.id,
     required this.title,
     required this.completed,
   });
 
-  factory Todo.fromJson(Map<String, dynamic> json) {
-    return Todo(
+  factory ToDo.fromJson(Map<String, dynamic> json) {
+    return ToDo(
       id: json['id'],
       title: json['title'],
       completed: json['completed'],
@@ -19,7 +19,6 @@ class Todo {
 
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
       'title': title,
       'completed': completed,
     };
